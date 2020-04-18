@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Faker.Resources {
+namespace Faker.Resources.Countries {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Faker.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Country {
+    internal class Countries {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Country() {
+        internal Countries() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Faker.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Country", typeof(Country).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Countries.Countries", typeof(Countries).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,17 +59,21 @@ namespace Faker.Resources {
                 resourceCulture = value;
             }
         }
-      
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AF;AX;AL;DZ;AS;AD;AO;AI;AQ;AG;AR;AM;AW;AU;AT;AZ;BH;BS;BD;BB;BY;BE;BZ;BJ;BM;BT;BO;BQ;BA;BW;BV;BR;IO;BN;BG;BF;BI;KH;CM;CA;CV;KY;CF;TD;CL;CN;CX;CC;CO;KM;CG;CD;CK;CR;CI;HR;CU;CW;CY;CZ;DK;DJ;DM;DO;EC;EG;SV;GQ;ER;EE;ET;FK;FO;FJ;FI;FR;GF;PF;TF;GA;GM;GE;DE;GH;GI;GR;GL;GD;GP;GU;GT;GG;GN;GW;GY;HT;HM;VA;HN;HK;HU;IS;IN;ID;IR;IQ;IE;IM;IL;IT;JM;JP;JE;JO;KZ;KE;KI;KP;KR;KW;KG;LA;LV;LB;LS;LR;LY;LI;LT;LU;MO;MK;MG;MW;MY;MV;ML;MT;MH;MQ;MR;MU;YT;MX;FM;MD;MC;MN;ME;MS;MA;MZ;MM;NA;NR;NP;NL;NC;NZ;NI;NE;NG;NU;NF;MP;NO;OM;PK;PW;PS;PA [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string Iso2LetterCodes {
             get {
                 return ResourceManager.GetString("Iso2LetterCodes", resourceCulture);
             }
         }
-
-        internal static string Names
-        {
-            get
-            {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Afghanistan;Åland Islands;Albania;Algeria;American Samoa;Andorra;Angola;Anguilla;Antarctica;Antigua and Barbuda;Argentina;Armenia;Aruba;Australia;Austria;Azerbaijan;Bahrain;Bahamas;Bangladesh;Barbados;Belarus;Belgium;Belize;Benin;Bermuda;Bhutan;Bolivia, Plurinational State of;Bonaire, Sint Eustatius and Saba;Bosnia and Herzegovina;Botswana;Bouvet Island;Brazil;British Indian Ocean Territory;Brunei Darussalam;Bulgaria;Burkina Faso;Burundi;Cambodia;Cameroon;Canada;Cape Verde;Cayman Islands;Central African Rep [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Names {
+            get {
                 return ResourceManager.GetString("Names", resourceCulture);
             }
         }

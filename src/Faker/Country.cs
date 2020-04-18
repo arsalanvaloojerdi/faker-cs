@@ -1,4 +1,5 @@
 ﻿using Faker.Extensions;
+using Faker.Resources.Countries;
 
 namespace Faker
 {
@@ -6,12 +7,12 @@ namespace Faker
     {
         public static string TwoLetterCode()
         {
-            return Resources.Country.Iso2LetterCodes.Split(Config.Separator).Random();
+            return Countries.Iso2LetterCodes.Split(Config.Separator).Random();
         }
 
         public static string Name()
         {
-            return Resources.Country.Names.Split(Config.Separator).Random();
+            return Countries.Names.Split(Config.Separator).Random();
         }
     }
 }

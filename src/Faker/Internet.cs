@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Faker.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Faker.Extensions;
 
 namespace Faker
 {
@@ -27,7 +27,7 @@ namespace Faker
 
         public static string FreeEmail()
         {
-            return $"{UserName()}@{Resources.Internet.FreeMail.Split(Config.Separator).Random()}";
+            return $"{UserName()}@{Resources.Internets.Internet.FreeMail.Split(Config.Separator).Random()}";
         }
 
         public static string UserName()
@@ -37,7 +37,7 @@ namespace Faker
 
         public static string UserName(string name)
         {
-            return Regex.Replace(name, @"[^\w]+", x => new[] {".", "_"}.Random(), RegexOptions.Compiled)
+            return Regex.Replace(name, @"[^\w]+", x => new[] { ".", "_" }.Random(), RegexOptions.Compiled)
                 .ToLowerInvariant();
         }
 
@@ -48,17 +48,17 @@ namespace Faker
 
         public static string Url()
         {
-            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
-            var page = Resources.Internet.Page.Split(Config.Separator).Random();
-            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            var subDomain = Resources.Internets.Internet.SubDomain.Split(Config.Separator).Random();
+            var page = Resources.Internets.Internet.Page.Split(Config.Separator).Random();
+            var pageSuffix = Resources.Internets.Internet.PageSuffix.Split(Config.Separator).Random();
             return $"http://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
         public static string SecureUrl()
         {
-            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
-            var page = Resources.Internet.Page.Split(Config.Separator).Random();
-            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            var subDomain = Resources.Internets.Internet.SubDomain.Split(Config.Separator).Random();
+            var page = Resources.Internets.Internet.Page.Split(Config.Separator).Random();
+            var pageSuffix = Resources.Internets.Internet.PageSuffix.Split(Config.Separator).Random();
             return $"https://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
@@ -69,7 +69,7 @@ namespace Faker
 
         public static string DomainSuffix()
         {
-            return Resources.Internet.DomainSuffix.Split(Config.Separator).Random();
+            return Resources.Internets.Internet.DomainSuffix.Split(Config.Separator).Random();
         }
     }
 }

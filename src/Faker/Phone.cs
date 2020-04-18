@@ -1,4 +1,5 @@
 ﻿using Faker.Extensions;
+using Faker.Resources.Phones;
 
 namespace Faker
 {
@@ -6,7 +7,7 @@ namespace Faker
     {
         public static string Number()
         {
-            return Resources.Phone.Formats.Split(Config.Separator).Random().Trim().Numerify();
+            return Phones.Formats.Split(Config.Separator).Random().Trim().Numerify();
         }
     }
 }

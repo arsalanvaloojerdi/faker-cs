@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Faker.Extensions;
+using Faker.Resources.Names;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Faker.Extensions;
 
 namespace Faker
 {
@@ -48,27 +49,27 @@ namespace Faker
 
         public static string First()
         {
-            return Resources.Name.First.Split(Config.Separator).Random().Trim();
+            return EnglishNames.First.Split(Config.Separator).Random().Trim();
         }
 
         public static string Middle()
         {
-            return Resources.Name.First.Split(Config.Separator).Random().Trim();
+            return EnglishNames.First.Split(Config.Separator).Random().Trim();
         }
 
         public static string Last()
         {
-            return Resources.Name.Last.Split(Config.Separator).Random().Trim();
+            return EnglishNames.Last.Split(Config.Separator).Random().Trim();
         }
 
         public static string Prefix()
         {
-            return Resources.Name.Prefix.Split(Config.Separator).Random();
+            return EnglishNames.Prefix.Split(Config.Separator).Random();
         }
 
         public static string Suffix()
         {
-            return Resources.Name.Suffix.Split(Config.Separator).Random();
+            return EnglishNames.Suffix.Split(Config.Separator).Random();
         }
     }
 }

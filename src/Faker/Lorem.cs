@@ -11,12 +11,12 @@ namespace Faker
         {
             if (count <= 0) throw new ArgumentException(@"Count must be greater than zero", nameof(count));
 
-            return count.Times(x => Resources.Lorem.Words.Split(Config.Separator).Random());
+            return count.Times(x => Resources.Lorems.Lorem.Words.Split(Config.Separator).Random());
         }
 
         public static string GetFirstWord()
         {
-            return Resources.Lorem.Words.Split(Config.Separator).First();
+            return Resources.Lorems.Lorem.Words.Split(Config.Separator).First();
         }
 
         public static string Sentence(int minWordCount)

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Faker.Resources {
+namespace Faker.Resources.Identifications {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Faker.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Identification {
+    internal class Identifications {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Identification() {
+        internal Identifications() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Faker.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Identification", typeof(Identification).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Identifications.Identifications", typeof(Identifications).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,28 +59,59 @@ namespace Faker.Resources {
                 resourceCulture = value;
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ACDEFGHJKMNPQRTUVWXY.
+        /// </summary>
+        internal static string Alpha {
+            get {
+                return ResourceManager.GetString("Alpha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Z;Y.
+        /// </summary>
         internal static string Alphabet {
-            get { return ResourceManager.GetString("Alphabet", resourceCulture); }
+            get {
+                return ResourceManager.GetString("Alphabet", resourceCulture);
+            }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1;2;3;4;5;6;7;8;9;A;C;D;E;F;G;H;J;K;M;N;P;Q;R;T;U;V;W;X;Y.
+        /// </summary>
+        internal static string Mbi {
+            get {
+                return ResourceManager.GetString("Mbi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A;C;D;E;F;G;H;J;K;M;N;P;Q;R;T;U;V;W;X;Y.
+        /// </summary>
+        internal static string MbiAlphabet {
+            get {
+                return ResourceManager.GetString("MbiAlphabet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1;2;3;4;5;6;7;8;9.
+        /// </summary>
+        internal static string MbiNumeric {
+            get {
+                return ResourceManager.GetString("MbiNumeric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0;1;2;3;4;5;6;7;8;9.
+        /// </summary>
         internal static string Numeric {
-            get { return ResourceManager.GetString("Numeric", resourceCulture); }
-        }
-
-        internal static string MbiNumeric
-        {
-            get { return ResourceManager.GetString("MbiNumeric", resourceCulture); }
-        }
-
-        internal static string MbiAlphabet
-        {
-            get { return ResourceManager.GetString("MbiAlphabet", resourceCulture); }
-        }
-
-        internal static string Mbi
-        {
-            get { return ResourceManager.GetString("Mbi", resourceCulture); }
+            get {
+                return ResourceManager.GetString("Numeric", resourceCulture);
+            }
         }
     }
 }

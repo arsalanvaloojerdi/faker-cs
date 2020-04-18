@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Faker.Resources {
+namespace Faker.Resources.Currencies {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Faker.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Currency {
+    internal class Currencies {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Currency() {
+        internal Currencies() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Faker.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Currency", typeof(Currency).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Currencies.Currencies", typeof(Currencies).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,17 +59,21 @@ namespace Faker.Resources {
                 resourceCulture = value;
             }
         }
-      
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ADP;AED;AFA;AFN;ALK;ALL;AMD;ANG;AOA;AOK;AON;AOR;ARA;ARP;ARS;ARY;ATS;AUD;AWG;AYM;AZM;AZN;BAD;BAM;BBD;BDT;BEC;BEF;BEL;BGJ;BGK;BGL;BGN;BHD;BIF;BMD;BND;BOB;BOP;BOV;BRB;BRC;BRE;BRL;BRN;BRR;BSD;BTN;BUK;BWP;BYB;BYN;BYR;BZD;CAD;CDF;CHC;CHE;CHF;CHW;CLF;CLP;CNY;COP;COU;CRC;CSD;CSJ;CSK;CUC;CUP;CVE;CYP;CZK;DDM;DEM;DJF;DKK;DOP;DZD;ECS;ECV;EEK;EGP;ERN;ESA;ESB;ESP;ETB;EUR;FIM;FJD;FKP;FRF;GBP;GEK;GEL;GHC;GHP;GHS;GIP;GMD;GNE;GNF;GNS;GQE;GRD;GTQ;GWE;GWP;GYD;HKD;HNL;HRD;HRK;HTG;HUF;IDR;IEP;ILP;ILR;ILS;INR;IQD;IRR;ISJ;ISK;ITL; [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string Iso3LetterCodes {
             get {
                 return ResourceManager.GetString("Iso3LetterCodes", resourceCulture);
             }
         }
-
-        internal static string Names
-        {
-            get
-            {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Afghani;Algerian Dinar;Andorran Peseta;Argentine Peso;Armenian Dram;Aruban Florin;Austral;Australian Dollar;Azerbaijan Manat;Azerbaijanian Manat;Bahamian Dollar;Bahraini Dinar;Baht;Balboa;Barbados Dollar;Belarusian Ruble;Belgian Franc;Belize Dollar;Bermudian Dollar;Bolivar;Bolivar Fuerte;Boliviano;Bolívar;Brazilian Real;Brunei Dollar;Bulgarian Lev;Burundi Franc;Cabo Verde Escudo;Canadian Dollar;Cayman Islands Dollar;Cedi;CFA Franc BCEAO;CFA Franc BEAC;CFP Franc;Chilean Peso;Colombian Peso;Comorian Franc;Con [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Names {
+            get {
                 return ResourceManager.GetString("Names", resourceCulture);
             }
         }

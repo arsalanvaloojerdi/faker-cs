@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Faker.Extensions;
+using Faker.Resources.Identifications;
 
 namespace Faker
 {
@@ -26,17 +27,17 @@ namespace Faker
         {
             return string.Join("", new[]
             {
-                Resources.Identification.MbiNumeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Mbi.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Mbi.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
+                Identifications.MbiNumeric.Split(Config.Separator).Random(),
+                Identifications.MbiAlphabet.Split(Config.Separator).Random(),
+                Identifications.Mbi.Split(Config.Separator).Random(),
+                Identifications.Numeric.Split(Config.Separator).Random(),
+                Identifications.MbiAlphabet.Split(Config.Separator).Random(),
+                Identifications.Mbi.Split(Config.Separator).Random(),
+                Identifications.Numeric.Split(Config.Separator).Random(),
+                Identifications.MbiAlphabet.Split(Config.Separator).Random(),
+                Identifications.MbiAlphabet.Split(Config.Separator).Random(),
+                Identifications.Numeric.Split(Config.Separator).Random(),
+                Identifications.Numeric.Split(Config.Separator).Random(),
             });
         }
 
@@ -50,7 +51,6 @@ namespace Faker
         private static IEnumerable<int> Range(int min, int max, Func<int, bool> conditionFn = null)
         {
             var range = new List<int>();
-            conditionFn ??= (z => true);
             if (min > max)
             {
                 return range;
@@ -119,13 +119,13 @@ namespace Faker
         public static string UkNationalInsuranceNumber()
         {
             var niNumber = new StringBuilder();
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Identifications.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Identifications.Alphabet.Split(Config.Separator).Random());
 
             for (var i = 0; i < 6; i++)
                 niNumber.Append(RandomNumber.Next(0, 9));
 
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Identifications.Alphabet.Split(Config.Separator).Random());
 
             return niNumber.ToString();
         }
@@ -145,7 +145,7 @@ namespace Faker
             var passportNumber = new StringBuilder();
 
             for (var i = 0; i < 9; i++)
-                passportNumber.Append(Resources.Identification.Numeric.Split(Config.Separator).Random());
+                passportNumber.Append(Identifications.Numeric.Split(Config.Separator).Random());
 
             return passportNumber.ToString();
         }

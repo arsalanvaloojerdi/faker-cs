@@ -1,4 +1,5 @@
 ﻿using Faker.Extensions;
+using Faker.Resources.Currencies;
 
 namespace Faker
 {
@@ -6,12 +7,12 @@ namespace Faker
     {
         public static string ThreeLetterCode()
         {
-            return Resources.Currency.Iso3LetterCodes.Split(Config.Separator).Random();
+            return Currencies.Iso3LetterCodes.Split(Config.Separator).Random();
         }
 
         public static string Name()
         {
-            return Resources.Currency.Names.Split(Config.Separator).Random();
+            return Currencies.Names.Split(Config.Separator).Random();
         }
     }
 }
