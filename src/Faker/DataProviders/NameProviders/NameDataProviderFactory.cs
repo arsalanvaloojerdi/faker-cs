@@ -1,5 +1,5 @@
 ﻿using Faker.Enums;
-using System;
+using Faker.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,9 +8,8 @@ namespace Faker.DataProviders.NameProviders
 {
     public static class NameDataProviderFactory
     {
-        private static readonly IEnumerable<INameDataProvider> Providers = Assembly.GetExecutingAssembly().GetTypes()
-            .Where(type => !type.IsAbstract && type.GetInterfaces().Contains(typeof(INameDataProvider))).ToList()
-            .Select(type => Activator.CreateInstance(type) as INameDataProvider);
+        private static readonly IEnumerable<INameDataProvider> Providers =
+            Assembly.GetExecutingAssembly().ThatImplements<INameDataProvider>();
 
         public static INameDataProvider GetProvider(Language language)
         {

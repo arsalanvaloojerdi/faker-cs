@@ -81,6 +81,7 @@
     <Compile Include="Enums\Country.cs" />
     <Compile Include="Enums\Language.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Finance.cs" />
