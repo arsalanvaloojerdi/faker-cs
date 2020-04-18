@@ -1,5 +1,5 @@
-﻿using Faker.Extensions;
-using Faker.Resources.Names;
+﻿using Faker.DataProviders.NameProviders;
+using Faker.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,27 +49,61 @@ namespace Faker
 
         public static string First()
         {
-            return EnglishNames.First.Split(Config.Separator).Random().Trim();
+            return First(Language.English);
+        }
+
+        public static string First(Language language)
+        {
+            return GetProvider(language).GetRandomFirstName();
         }
 
         public static string Middle()
         {
-            return EnglishNames.First.Split(Config.Separator).Random().Trim();
+            return GetProvider(Language.English).GetRandomMiddleName();
+        }
+
+        public static string Middle(Language language)
+        {
+            return GetProvider(language).GetRandomMiddleName();
         }
 
         public static string Last()
         {
-            return EnglishNames.Last.Split(Config.Separator).Random().Trim();
+            return GetProvider(Language.English).GetRandomLastName();
+        }
+
+        public static string Last(Language language)
+        {
+            return GetProvider(language).GetRandomLastName();
         }
 
         public static string Prefix()
         {
-            return EnglishNames.Prefix.Split(Config.Separator).Random();
+            return GetProvider(Language.English).GetRandomPrefix();
+        }
+
+        public static string Prefix(Language language)
+        {
+            return GetProvider(language).GetRandomPrefix();
         }
 
         public static string Suffix()
         {
-            return EnglishNames.Suffix.Split(Config.Separator).Random();
+            return Suffix(Language.English);
         }
+
+        public static string Suffix(Language language)
+        {
+            return GetProvider(Language.English).GetRandomSuffix();
+        }
+
+        #region PrivateMethods
+
+        private static INameProvider GetProvider(Language language)
+        {
+            return NameProviderFactory.GetProvider(language);
+        }
+
+        #endregion
     }
 }
