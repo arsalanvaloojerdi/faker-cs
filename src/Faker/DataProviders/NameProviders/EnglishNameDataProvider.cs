@@ -5,7 +5,7 @@ using static Faker.Config;
 
 namespace Faker.DataProviders.NameProviders
 {
-    public class EnglishNameProvider : INameProvider
+    public class EnglishNameDataProvider : INameDataProvider
     {
         /// <inheritdoc />
         public Language Language => Language.English;

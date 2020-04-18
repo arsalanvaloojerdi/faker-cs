@@ -99,9 +99,9 @@ namespace Faker
 
         #region PrivateMethods
 
-        private static INameProvider GetProvider(Language language)
+        private static INameDataProvider GetProvider(Language language)
         {
-            return NameProviderFactory.GetProvider(language);
+            return NameDataProviderFactory.GetProvider(language);
         }
 
         #endregion

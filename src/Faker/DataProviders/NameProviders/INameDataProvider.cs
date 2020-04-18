@@ -2,7 +2,7 @@
 
 namespace Faker.DataProviders.NameProviders
 {
-    public interface INameProvider
+    public interface INameDataProvider
     {
         Language Language { get; }
         string GetRandomFirstName();
