@@ -1,45 +1,26 @@
-﻿using Faker.Extensions;
-using Faker.Resources.Companies;
-using System;
-using System.Collections.Generic;
+﻿using Faker.DataProviders.CompanyProviders;
 
 namespace Faker
 {
     public static class Company
     {
-        private static readonly IEnumerable<Func<string>> NameFormats = new List<Func<string>>
-        {
-            () => $"{Faker.Name.Last()} {Suffix()}",
-            () => $"{Faker.Name.Last()}-{Faker.Name.Last()}",
-            () => $"{Faker.Name.Last()}, {Faker.Name.Last()} {UsCompanies.And} {Faker.Name.Last()}"
-        };
-
         public static string Name()
         {
-            return NameFormats.Random();
+            return Name(Enums.Country.Us);
         }
 
-        public static string Suffix()
+        public static string Name(Enums.Country country)
         {
-            return UsCompanies.Suffix.Split(Config.Separator).Random();
+            return GetProvider(country).GetRandomCompany();
         }
 
-        /// <summary>
-        ///     Generate a buzzword-laden catch phrase.
-        ///     Wordlist from http://www.1728.com/buzzword.htm
-        /// </summary>
-        public static string CatchPhrase()
+        #region PrivateMethods
+
+        private static ICompanyDataProvider GetProvider(Enums.Country country)
         {
-            return String.Empty;
+            return CompanyDataProviderFactory.GetProvider(country);
         }
 
-        /// <summary>
-        ///     When a straight answer won't do, BS to the rescue!
-        ///     Wordlist from http://dack.com/web/bullshit.html
-        /// </summary>
-        public static string BS()
-        {
-            return string.Empty;
-        }
+        #endregion
     }
 }

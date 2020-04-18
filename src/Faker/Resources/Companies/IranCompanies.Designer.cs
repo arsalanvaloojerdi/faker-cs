@@ -22,14 +22,14 @@ namespace Faker.Resources.Companies {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class UsCompanies {
+    internal class IranCompanies {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal UsCompanies() {
+        internal IranCompanies() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Faker.Resources.Companies {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Companies.UsCompanies", typeof(UsCompanies).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Companies.IranCompanies", typeof(IranCompanies).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace Faker.Resources.Companies {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Microsoft,Apple,ThoughtWorks.
+        ///   Looks up a localized string similar to ایران خوردو,سایپا.
         /// </summary>
         internal static string Name {
             get {

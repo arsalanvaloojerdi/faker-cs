@@ -69,7 +69,17 @@
     <Compile Include="Config.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Currency.cs" />
+    <Compile Include="DataProviders\CompanyProviders\UsCompanyDataProvider.cs" />
+    <Compile Include="DataProviders\CompanyProviders\ICompanyDataProvider.cs" />
+    <Compile Include="DataProviders\CompanyProviders\CompanyDataProviderFactory.cs" />
+    <Compile Include="DataProviders\CompanyProviders\IranCompanyDataProvider.cs" />
+    <Compile Include="DataProviders\NameProviders\EnglishNameDataProvider.cs" />
+    <Compile Include="DataProviders\NameProviders\INameDataProvider.cs" />
+    <Compile Include="DataProviders\NameProviders\NameDataProviderFactory.cs" />
+    <Compile Include="DataProviders\NameProviders\PersianNameDataProvider.cs" />
     <Compile Include="Enum.cs" />
+    <Compile Include="Enums\Country.cs" />
+    <Compile Include="Enums\Language.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -85,6 +95,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsAddresses.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Companies\IranCompanies.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IranCompanies.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Companies\UsCompanies.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnglishNames.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Names\PersianNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersianNames.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Phones\Phones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,6 +168,10 @@
     <EmbeddedResource Include="Resources\Addresses\UsAddresses.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UsAddresses.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Companies\IranCompanies.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IranCompanies.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Companies\UsCompanies.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,6 +201,10 @@
     <EmbeddedResource Include="Resources\Names\EnglishNames.resx">
       <LastGenOutput>EnglishNames.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Names\PersianNames.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersianNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Phones\Phones.resx">
       <Generator>ResXFileCodeGenerator</Generator>
